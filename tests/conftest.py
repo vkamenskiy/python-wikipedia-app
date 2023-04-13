@@ -25,12 +25,7 @@ def driver_management(request):
 
     yield
 
-    # given we want to save disk space
-    # then we store screenshots and xml dumps only for failed tests
-    if config.settings.run_on_browserstack and request.node.result_of_call.failed:
-        '''
-        request.node is an "item" because we use the default "function" scope
-        '''
+    if config.settings.run_on_browserstack:
         utils.allure.attach.screenshot(name='Last screenshot')
         utils.allure.attach.screen_xml_dump()
 
