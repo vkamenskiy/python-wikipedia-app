@@ -1,0 +1,14 @@
+*.pyc
+__pycache__/
+.pytest_cache/
+.idea
+.venv
+.python-version
+reports/
+config.real.env
+config.browserstack.env
+config.emulation.env
+*.log
+demo
+allure-results
+.DS_Store
